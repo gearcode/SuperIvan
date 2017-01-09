@@ -40,7 +40,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * This small program demonstrates how to initialize Dukascopy client and start a strategy
+ * This small program demonstrates how to initialize Dukascopy client and start a old_strategy
  */
 public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
@@ -130,9 +130,9 @@ public class Main {
         LOGGER.info("Subscribing instruments...");
         client.setSubscribedInstruments(instruments);
                 
-        //start the strategy
-        LOGGER.info("Starting strategy");
-        client.startStrategy(new MA_Play());
+        //start the old_strategy
+        LOGGER.info("Starting old_strategy");
+        client.startStrategy(new MA_Following());
         //now it's running
     }
 }
